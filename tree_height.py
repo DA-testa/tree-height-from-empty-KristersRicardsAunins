@@ -5,9 +5,9 @@ import threading
 import numpy
 
 
-def compute_height(n, parents):
+#def compute_height(n, parents):
     # Write this function
-    heights = [0] * n
+ #   heights = [0] * n
     
     def get_height(node):
         if heights[node] != 0:
@@ -29,7 +29,7 @@ def main():
     # implement input form keyboard and from files
     n = int(input())
     parents = list(map(int, input().split()))
-    max_height = compute_height(n, parents)
+    heights = [0] * n
     print(max_height)
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
