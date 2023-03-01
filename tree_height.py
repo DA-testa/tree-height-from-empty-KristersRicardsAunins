@@ -25,6 +25,5 @@ def main():
     parents = list(map(int, input().split()))
     print(compute_height(n, parents))
     
-if __name__ == '__main__':
-    main()
+main()
 # print(numpy.array([1,2,3]))
