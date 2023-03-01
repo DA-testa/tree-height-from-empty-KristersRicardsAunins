@@ -2,38 +2,29 @@
 
 import sys
 import threading
-import numpy
-
-class Node:
-    def __init__(self,index):
-        self.index = index
-        self.children = []
+from collections import defaultdict
     
-def compute_height(node):
-    if not nodes:
-        return 0
-    height = []
-    for node in nodes:
-        heights.append(compute_height(node.children))
-    return 1 + max(heights)
-    
-def build_tree(parents):
-    nodes = [Node(i) for i in range(len(parents))]
-    root = None
-    for i, parent_index in enumerate(parents):
-        if parent_index == -1:
-            root = nodes[i]
+def compute_height(n, parents):
+    tree = defaultdict(list)
+    for i in range(n):
+        if parents[i] == -1:
+            root = i
         else:
-            nodes[parent_index].children.append(nodes[i])
-        return root
+            tree[parents[i]].append(i)
+    
+    def dfs(node):
+        if not tree [node]:
+            return 0
+        else:
+            return max(dfs(child) for child in tree[node]) + 1
+    
+    return dfs(root)
 
 def main():
     n = int(input())
     parents = list(map(int, input().split()))
-    root = build_tree(parents)
-    height = compute_height([root])
-    print(height)
+    print(compute_height(n, parents))
     
-if __name__ == '__main__':
+    if __name__ == '__main__':
     main()
 # print(numpy.array([1,2,3]))
