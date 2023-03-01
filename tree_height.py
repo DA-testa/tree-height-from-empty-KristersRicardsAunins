@@ -34,6 +34,6 @@ def main():
     height = compute_height([root])
     print(height)
     
-if __name__ == '__main__'
+if __name__ == '__main__':
     main()
 # print(numpy.array([1,2,3]))
