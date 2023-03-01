@@ -20,9 +20,6 @@ def compute_height(n, parents):
     
     return dfs(root)
 
-def main():
-    n = int(input())
-    parents = list(map(int, input().split()))
+    n = 10
+    parents = [9, 7, 5, 5, 2, 9, 9, 9, 2, -1]
     print(compute_height(n, parents))
-    
-main()
