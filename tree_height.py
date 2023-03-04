@@ -46,7 +46,7 @@ def main():
             file_name = input("file name: ")
         file_path = "./data/" + file_name
         
-        while open(file_path) as f:
+        with open(file_path) as f:
             n = int(f.readline().strip())
             parent = list(map(int, f.readline().strip().split()))
             height = find_height(n, parent)
