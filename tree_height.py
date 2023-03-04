@@ -28,7 +28,7 @@ def find_height(n, parent):
         if level > max_height:
             max_height = level
         for child in node.children:
-            queue.append(child, level + 1)
+            queue.append((child, level + 1))
     return max_height
 
 def main():
@@ -54,7 +54,7 @@ def main():
             
     pass
 
-if __name__ == '__main__'
-    sys.setrecurionlimit(107)
-    threading.stack_size(227)
+if __name__ == '__main__':
+    sys.setrecursionlimit(10**7)
+    threading.stack_size(2**27)
     threading.Thread(target=main).start()
