@@ -8,7 +8,7 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.children = []
-        
+       
 def find_height(n, parent):
     nodes = [Node(i) for i in range (n)]
     root = None
