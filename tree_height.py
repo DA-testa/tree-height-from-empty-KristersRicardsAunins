@@ -32,8 +32,8 @@ def find_height(n, parent):
     return max_height
 
 def main():
-    input_type = input(""I" or "F"" )
-    if input_type == "I":
+    input_type = input("Choose 'i' or 'F': " )
+    if input_type == "i":
         n = int(input())
         parent = list(map(int, input().split()))
         height = find_height(n, parent)
