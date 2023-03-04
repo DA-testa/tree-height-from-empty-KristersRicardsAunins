@@ -32,7 +32,7 @@ def find_height(n, parent):
     return max_height
 
 def main():
-    input_type = input("Choose 'i' or 'F': " )
+    input_type = input()
     if input_type == "i":
         n = int(input())
         parent = list(map(int, input().split()))
@@ -40,10 +40,10 @@ def main():
         print(height)
        
     elif input_type == "F":
-        file_name = input("File name: ")
+        file_name = input()
         while 'a' in file_name:
             print("File name cannot contain 'a'")
-            file_name = input("file name: ")
+            file_name = input()
         file_path = "./data/" + file_name
         
         with open(file_path) as f:
