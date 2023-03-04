@@ -17,7 +17,7 @@ def find_height(n, parent):
         if parent[i] == -1:
             root = nodes[i]
         else:
-            parent_node = nodes[parenti[i]]
+            parent_node = nodes[parent[i]]
             parent_node.children.append(nodes[i])
                 
     max_height = 0
