@@ -44,7 +44,7 @@ def main():
         while 'a' in file_name:
             print("File name cannot contain 'a'")
             file_name = input()
-        file_path = "https://github.com/DA-testa/tree-height-from-empty-KristersRicardsAunins/tree/main/test/" + file_name
+        file_path = "./tree-height-from-empty-KristersRicardsAunins/test/" + file_name
         
         with open(file_path) as f:
             n = int(f.readline().strip())
