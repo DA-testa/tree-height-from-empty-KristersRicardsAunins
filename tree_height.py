@@ -34,7 +34,7 @@ def find_height(n, parent):
 
 def main():
     while True:
-        vai = input()
+        vai = input().strip().upper()
         if vai == "I":
             n = int(input())
             parent = list(map(int, input().split()))
