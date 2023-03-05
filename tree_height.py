@@ -20,10 +20,9 @@ def find_height(n, parent):
         else:
             parent_node = nodes[parent[i]]
             parent_node.children.append(nodes[i])
-                
     max_height = 0
     queue = [(root, 1)]
-   
+  
     while queue:
         node, level = queue.pop(0)
         if level > max_height:
