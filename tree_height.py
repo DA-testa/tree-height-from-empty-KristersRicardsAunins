@@ -36,19 +36,21 @@ def main():
     while True:
         vai = input().strip().upper()
         if vai == "I":
-            n = int(input())
-            parent = list(map(int, input().split()))
+            input_string = input()
+            n = int(input_string.split()[0])
+            parent = list(map(int, input_string.split()[1:]))
             break
         elif vai == "F":
             fails = input()
             if os.path.exists(fails):
                 with open(fails) as f:
-                    n = int(f.readline().strip())
-                    parent = list(map(int, f.readline().strip().split()))
+                    input_string = f.readline().strip()
+                    n = int(input_string.split()[0])
+                    parent = list(map(int, input_string.split()[1:]))
                 break
             
     height = find_height(n, parent)
-    print(height)      
+    print(height)
     pass
 
 if __name__ == '__main__':
