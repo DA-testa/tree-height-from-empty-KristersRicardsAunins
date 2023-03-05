@@ -49,7 +49,7 @@ def main():
                     parent = list(map(int, f.readline().strip().split()))
                     height = find_height(n, parent)
                     print(height)
-                    break
+                break
             else:
                 print()
         else:
