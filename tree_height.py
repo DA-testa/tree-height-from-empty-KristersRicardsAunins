@@ -38,8 +38,6 @@ def main():
         if vai == "I":
             n = int(input())
             parent = list(map(int, input().split()))
-            height = find_height(n, parent)
-            print(height)
             break
         elif vai == "F":
             fails = input()
@@ -47,14 +45,14 @@ def main():
                 with open(fails) as f:
                     n = int(f.readline().strip())
                     parent = list(map(int, f.readline().strip().split()))
-                    height = find_height(n, parent)
-                    print(height)
                 break
             else:
                 print()
         else:
             print()
-           
+            
+    height = find_height(n, parent)
+    print(height)      
     pass
 
 if __name__ == '__main__':
