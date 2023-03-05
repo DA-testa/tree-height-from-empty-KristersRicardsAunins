@@ -33,8 +33,7 @@ def find_height(n, parent):
     return max_height
 
 def main():
-    while True:
-        vai = input().strip().upper()
+        vai = input()
         if vai == "I":
             n = int(input())
             parent = list(map(int, input().split()))
@@ -46,10 +45,6 @@ def main():
                     n = int(f.readline().strip())
                     parent = list(map(int, f.readline().strip().split()))
                 break
-            else:
-                print()
-        else:
-            print()
             
     height = find_height(n, parent)
     print(height)      
