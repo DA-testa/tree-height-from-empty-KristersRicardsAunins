@@ -32,12 +32,33 @@ def find_height(n, parent):
     return max_height
 
 def main():
-    input_type = input()
-    if input_type == "I":
-        n = int(input())
-        parent = list(map(int, input().split()))
-        height = find_height(n, parent)
-        print(height)
+    while True:
+        vai = input().strip().upper()
+        if vai == "I":
+            n = int(input())
+            parent = list(map(int, input().split()))
+            height = find_height(n, parent)
+            print(height)
+            break
+        elif vai == "F":
+            fails = input()
+            if os.path.exists(fails):
+                with open(fails) as f:
+                    n = int(f.readline().strip())
+                    parent = list(map(int, f.readline().strip().split()))
+                    height = find_height(n, parent)
+                    print(height)
+                    break
+            else:
+                print()
+        else:
+            print()
+    #input_type = input()
+    #if input_type == "I":
+      #  n = int(input())
+      #  parent = list(map(int, input().split()))
+      #  height = find_height(n, parent)
+      #  print(height)
        
     elif input_type == "F":
         file_name = input()
