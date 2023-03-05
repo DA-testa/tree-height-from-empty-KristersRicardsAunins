@@ -60,18 +60,18 @@ def main():
       #  height = find_height(n, parent)
       #  print(height)
        
-    elif input_type == "F":
-        file_name = input()
-        while 'a' in file_name:
-            print("File name cannot contain 'a'")
-            file_name = input()
-        file_path = "./tree-height-from-empty-KristersRicardsAunins/test/" + file_name
+    #elif input_type == "F":
+        #file_name = input()
+        #while 'a' in file_name:
+           # print("File name cannot contain 'a'")
+           # file_name = input()
+       # file_path = "./tree-height-from-empty-KristersRicardsAunins/test/" + file_name
         
-        with open(file_path) as f:
-            n = int(f.readline().strip())
-            parent = list(map(int, f.readline().strip().split()))
-            height = find_height(n, parent)
-            print(height)
+        #with open(file_path) as f:
+           # n = int(f.readline().strip())
+           # parent = list(map(int, f.readline().strip().split()))
+           # height = find_height(n, parent)
+          #  print(height)
            
     pass
 
