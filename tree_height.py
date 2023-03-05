@@ -33,6 +33,7 @@ def find_height(n, parent):
     return max_height
 
 def main():
+    while True:
         vai = input()
         if vai == "I":
             n = int(input())
